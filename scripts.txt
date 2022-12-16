@@ -53,3 +53,22 @@ do
 echo $i
 done
 
+SCRIPT 5
+
+#!/bin/bash
+
+suma=0
+i=0
+
+echo -p "Introduce un numero: " num
+
+while [ $num -ne 0 ]; do
+ suma=$$((i+1))
+ read -p "Introduce un numero: " num
+done
+
+if [ $i -ne 0 ]
+ then promedio=$((suma/i))
+else
+ promedio=0
+fi
