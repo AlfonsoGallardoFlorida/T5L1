@@ -1,0 +1,43 @@
+SCRIPT 1:
+
+#!/bin/bash
+
+read -p "Introduce el primer numero: " valor1
+read -p "Introduce el segundo valor: " valor2
+if [ $valor1 -gt $valor2 ]
+then
+ echo "El primer numero es mayor que el segundo"
+else
+ echo "El segundo numero es mayor que el primero"
+fi
+
+SCRIPT 2:
+
+#!/bin/bash
+
+read -p "Introduce un valor mayor que 0: " valor
+
+if [ $(($valor % 2)) -eq 0 ]
+then
+ echo "Es Par"
+else
+ echo "Es Impar"
+fi
+
+SCRIPT 3:
+
+#!/bin/bash
+
+read -p "introduce tu nota: " nota
+if [ $nota -lt 5 ]
+then
+ echo "Estas suspendido"
+elif [ $nota -lt 7 ]
+then
+ echo "Tienes un bien"
+elif [ $nota -lt 9 ]
+then
+ echo "Tienes un notable"
+else
+ echo "Tienes un sobresaliente"
+fi
