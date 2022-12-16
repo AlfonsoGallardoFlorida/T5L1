@@ -41,3 +41,15 @@ then
 else
  echo "Tienes un sobresaliente"
 fi
+
+SCRIPT 4
+
+#!/bin/bash
+
+read -p "Introduce un valor mayor a 0: " valor
+
+for i in `seq 0 $valor`
+do
+echo $i
+done
+
