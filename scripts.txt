@@ -103,3 +103,41 @@ cantTotal=$((20+(cantL-50)*2/10+(cantL-200)*1/10))
 fi
 
 echo "La cantidad total de litros consumidos cuesta: $cantTotal euros."
+
+----------
+SCRIPT 7:
+----------
+
+#!/bin/bash
+
+read-p "Introduce el numero de dia (1..30): " numDia
+
+if [ $numDia -lt 1 ] || [ $numDia -gt 30 ]
+then echo "Error, el numero debe estar entre el 1 y el 30."
+else
+dia=$((numDia%7))
+
+case $dia in
+    0)
+    echo "Domingo"
+    ;;
+    1)
+    echo "Lunes"
+    ;;
+    2)
+    echo "Martes"
+    ;;
+    3)
+    echo "Miercoles"
+    ;;
+    4)
+    echo "Jueves"
+    ;;
+    5)
+    echo "Viernes"
+    ;;
+    6)
+    echo "Sabado"
+    ;;
+esac
+fi
