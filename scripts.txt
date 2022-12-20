@@ -1,4 +1,6 @@
+----------
 SCRIPT 1:
+----------
 
 #!/bin/bash
 
@@ -11,7 +13,9 @@ else
  echo "El segundo numero es mayor que el primero"
 fi
 
+----------
 SCRIPT 2:
+----------
 
 #!/bin/bash
 
@@ -24,7 +28,9 @@ else
  echo "Es Impar"
 fi
 
+----------
 SCRIPT 3:
+----------
 
 #!/bin/bash
 
@@ -42,7 +48,9 @@ else
  echo "Tienes un sobresaliente"
 fi
 
+----------
 SCRIPT 4
+----------
 
 #!/bin/bash
 
@@ -53,7 +61,9 @@ do
 echo $i
 done
 
-SCRIPT 5
+----------
+SCRIPT 5:
+----------
 
 #!/bin/bash
 
@@ -72,3 +82,24 @@ if [ $i -ne 0 ]
 else
  promedio=0
 fi
+
+----------
+SCRIPT 6:
+----------
+
+#!/bin/bash
+
+read -p "Introduce la cantidad de litros de agua consumidos: " cantL
+
+cantTotal=0
+
+if [ $cantL -le 50 ]
+then
+$cantTotal=20
+elif [ $cantL -gt 50 ] && [ &cantL -le 200 ]
+then cantTotal=$((20+(cantL-50)*2/10))
+else
+cantTotal=$((20+(cantL-50)*2/10+(cantL-200)*1/10))
+fi
+
+echo "La cantidad total de litros consumidos cuesta: $cantTotal euros."
